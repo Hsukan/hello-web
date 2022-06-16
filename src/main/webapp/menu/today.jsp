@@ -7,14 +7,12 @@
 <script>
 	window.onload = () => {
 		function f(n){
-            // return n <10 ? "0"+ n : n;
-            return n.toString().padStart(2,"0");
+            return n <10 ? "0"+ n : n;
         };
 		const now = new Date();
 		const yyyy = now.getFullYear();
 		const MM = f(now.getMonth()+1);
         const dd = f(now.getDate());
-        
         const days = ['일', '월', '화', '수', '목', '금', '토'];
         const day = days[now.getDay()];
 
