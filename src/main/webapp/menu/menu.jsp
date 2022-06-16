@@ -4,7 +4,7 @@
 		<html>
 		<head>
 			<meta charset="UTF-8">
-			<title>오늘의 메뉴</title>
+			<title>오늘의 메뉴</title>		
 			<style>
 				table {border:1px solid black; border-collapse:collapse;}
 				th,td {border:1px solid black; padding:10px;}
@@ -12,6 +12,8 @@
 		</head>
 		<body>
 		<h2>오늘의 메뉴 <sub style="color:lightgray"></sub></h2>
+		<%@include file="/menu/today.jsp" %>
+		<div id="today"></div>
 		
 		<table>
 			<tr>
@@ -41,6 +43,7 @@
 				<td>어니언링</td>
 				<td>1700원</td>
 			</tr>
+
 			<tr>
 				<td rowspan="4">음료메뉴</td>
 				<td>콜라</td>
@@ -60,7 +63,6 @@
 			</tr>
 		</table>
 		<br /><br />
-		
 		<form name="menuFrm" action="/web/menu.do" method="get">
 			<label for="mainMenu">메인메뉴 :</label>
 			<select id="mainMenu" name="mainMenu" required>
